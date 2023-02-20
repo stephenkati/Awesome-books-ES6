@@ -59,6 +59,7 @@ nav a {
 
 .all-books {
   width: 100vw;
+  min-height: 41vh;
   display: flex;
   flex-direction: column;
   align-items: center;
