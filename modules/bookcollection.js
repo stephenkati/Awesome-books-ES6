@@ -17,7 +17,7 @@ export class BookCollection {
     this.addBtn.addEventListener('click', this.newBook.bind(this));
   }
 
-  newBook() {
+  newBook = ()=> {
     const title = this.title.value;
     const arthur = this.arthur.value;
     const book = new Books(title, arthur);
@@ -28,13 +28,13 @@ export class BookCollection {
     this.arthur.value = '';
   }
 
-  removeBook(index) {
+  removeBook = (index)=> {
     this.bookObj.splice(index, 1);
     this.displayBooks();
     this.storeBook();
   }
 
-  displayBooks() {
+  displayBooks = ()=> {
     this.bookList.innerHTML = '';
     this.bookObj.forEach((book, index) => {
       const bookItem = document.createElement('li');
@@ -61,7 +61,7 @@ export class BookCollection {
     });
   }
 
-  storeBook() {
+  storeBook = ()=> {
     localStorage.setItem('inputArr', JSON.stringify(this.bookObj));
   }
 }
